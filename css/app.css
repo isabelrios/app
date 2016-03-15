@@ -1,0 +1,166 @@
+html {
+  font: normal 10px/10px Arial;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 2.2rem/4.4rem "Fira Sans", Arial;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: white;
+  font-weight: 300;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body > section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 200ms linear;
+}
+
+body > section.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+body > section > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: #2F99CD;
+  color: white;
+  padding: 1rem 3rem;
+  display: flex;
+}
+
+h1, h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.2rem;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2.6rem;
+  padding: 1rem 3rem 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+input {
+  font: normal 2.2rem/4.4rem "Fira Sans", Arial;
+  font-weight: 300;
+  background: #fff;
+  margin: 0;
+  border: 1px solid grey;
+  border-radius: .3rem;
+}
+
+button {
+  font: normal 2.2rem/4.4rem "Fira Sans", Arial;
+  font-weight: 300;
+  background: #fff;
+  margin: 0;
+  border: 1px solid grey;
+  border-radius: .3rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  opacity: 0;
+  width: 90vw;
+  padding: 0;
+  box-shadow: 1rem 1rem 2rem grey;
+  left: 5vw;
+  top: 40%;
+  position: absolute;
+  margin: auto;
+  background: white;
+  text-align: center;
+}
+
+.modal.visible {
+  display: block;
+  opacity: 1;
+}
+
+.modal footer {
+  padding-bottom: 1rem;
+}
+
+/* User Logout Button */
+.user-logout-button {
+  font: normal 1rem/2rem "Fira Sans", Arial;
+  white-space: nowrap;
+}
+
+/* Footer menu */
+footer ul {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+
+footer ul li {
+  flex-grow: 1;
+  text-align: center;
+  background: grey;
+  margin: .1rem;
+  opacity: .5;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0;
+  background: url(menu-icons/home.svg) center center no-repeat;
+  background-size: 7.5vmin;
+  height: 15vmin;
+  display: block;
+  opacity: .5;
+}
+
+footer ul li.active,
+footer ul li.active a {
+  opacity: 1;
+  background-color: #2F99CD;
+}
+
+footer ul li a[href~="#home"] {
+  background-image: url(menu-icons/home.svg);
+}
+
+footer ul li a[href~="#themes"] {
+  background-image: url(menu-icons/themes.svg);
+}
+
+footer ul li a[href~="#mr-fox"] {
+  background-image: url(menu-icons/mr-fox.svg);
+}
+
+footer ul li a[href~="#settings"] {
+  background-image: url(menu-icons/settings.svg);
+}
